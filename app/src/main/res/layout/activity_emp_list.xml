@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".employeeActivities.EmpListActivity">
+
+   
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Employee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="@+id/listViewUD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134">
+
+        <TextView
+            android:id="@+id/line_hid"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:text="ID"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/line_h1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="Name"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/line_h2"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:text="Address"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/line_h3"
+            android:layout_width="87dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.20"
+            android:text="SALARY"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/line_hAction"
+            android:layout_width="103dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            android:text="Action"
+            android:textColor="@color/gold"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewUD"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
