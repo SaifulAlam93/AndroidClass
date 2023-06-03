@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password = edPassword.getText().toString();
 
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+//                startActivity(new Intent(LoginActivity.this, NavigationActivity.class));
+
 //                if (userName.length()==0 || password.length()==0){
 //                    Toast.makeText(getApplicationContext(),"Please Fill All The Data Field.",Toast.LENGTH_SHORT).show();
 //                }else {

@@ -87,7 +87,7 @@ public class Database extends SQLiteOpenHelper {
 
     }
 
-    public void addNewEmployee(Employee emp){
+    public void addNewEmployee(Employee emp) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -100,7 +100,6 @@ public class Database extends SQLiteOpenHelper {
         db.insert("EMPLOYEE", null, values);
         db.close();
     }
-
 
 
     public ArrayList<HashMap<String, String>> getAllEmployees() {
@@ -214,6 +213,28 @@ public class Database extends SQLiteOpenHelper {
         }
         db.close();
         return userList;
+    }
+
+    public boolean updateEmployee(Employee emp) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("NAME", emp.getName());
+        values.put("ADDRESS", emp.getAddress());
+        values.put("SALARY", emp.getSalary());
+        values.put("EMAIL", emp.getEmail());
+        values.put("DEP", emp.getDep());
+        int result = db.update("EMPLOYEE", values, "id = ?", new String[]{emp.getId() + ""});
+        db.close();
+
+        return result > 0;
+    };
+
+    public boolean deleteEmployee(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int rowCount = db.delete("EMPLOYEE", "id = ?", new String[]{id + ""});
+        db.close();
+        return rowCount > 0;
     }
 
 

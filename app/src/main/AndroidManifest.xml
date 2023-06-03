@@ -14,10 +14,13 @@
         android:theme="@style/Theme.MyApplication1"
         tools:targetApi="31">
         <activity
+            android:name=".employeeActivities.EditEmpActivity"
+            android:exported="false" />
+        <activity
             android:name=".employeeActivities.EmpListActivity"
             android:exported="false" />
         <activity
-            android:name=".CreateEmployeeActivity"
+            android:name=".employeeActivities.CreateEmployeeActivity"
             android:exported="false" />
         <activity
             android:name=".employeeActivities.CreateEmpActivity"

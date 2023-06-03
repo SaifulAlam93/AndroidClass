@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.employeeActivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication1.Database;
+import com.example.myapplication1.R;
 import com.example.myapplication1.entity.Employee;
 
 import java.util.Calendar;
