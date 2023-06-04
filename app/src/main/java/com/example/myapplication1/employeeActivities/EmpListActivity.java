@@ -21,7 +21,6 @@ import java.util.Objects;
 
 public class EmpListActivity extends AppCompatActivity {
 
-
     ArrayList employeeList;
 
     Button createBtn;
